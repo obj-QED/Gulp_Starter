@@ -1,0 +1,33 @@
+.banner {
+  margin-top: toRem(40);
+  @media (min-width: 1940px) {
+    margin-top: toRem(92);
+  }
+  @media (min-width: 768) {
+    margin-top: toRem(78);
+  }
+  .hidden {
+    display: none;
+  }
+  &__image {
+    display: none;
+    @media (min-width: 1024px) {
+      display: block;
+    }
+    @media (min-width: 1940px) {
+      margin-left: toRem((80));
+      max-width: toRem(866);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .form {
+    max-width: toRem(560);
+    @media (min-width: 1940px) {
+      max-width: toRem(946);
+    }
+  }
+}

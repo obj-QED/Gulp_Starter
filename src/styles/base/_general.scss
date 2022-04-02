@@ -1,4 +1,66 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1940px) {
+  .container {
+    max-width: 100%;
+    padding-left: toRem(300);
+    padding-right: toRem(300);
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 520px) {
+  .container {
+    padding-left: toRem(16);
+    padding-right: toRem(16);
+  }
+}
+
+.btn {
+  background: #f8f8f9;
+  border-radius: 8px;
+  border: 0;
+  position: relative;
+  display: inline-flex;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  padding: toRem(15) toRem(56);
+
+  @media (min-width: 1940px) {
+    padding: toRem(28) toRem(75);
+  }
+  @media (min-width: 768px) {
+    padding: toRem(19) toRem(56);
+  }
+  .text {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    color: #0e0c20;
+    font-size: 12px;
+    line-height: 18px;
+    @media (min-width: 1940px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &--gradient {
+    background: linear-gradient(180deg, #7c45f8 0%, #746ffa 79.33%, #6d90fb 100%);
+    .text {
+      color: #fff;
+    }
+  }
 }

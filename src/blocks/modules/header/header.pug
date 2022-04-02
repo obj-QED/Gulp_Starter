@@ -1,0 +1,11 @@
+.header
+  .container
+    .row.justify-content-between.items-center.align-items-center
+      .col-auto
+        //- Лучше использовать для логотипов и брендов изображения или картинки. (png, jpg, svg)
+        a.logo(href="#")
+          svg(width="223" height="52")
+            use(xlink:href="img/sprites/sprite.svg#logo")
+      .col-auto
+        a(href="#").btn.btn--nav
+          span.text Action
