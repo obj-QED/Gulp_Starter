@@ -1,0 +1,31 @@
+mixin feature-item($icon, $description, $order)
+  - const classItem = "d-flex align-items-center flex-column text-center";
+
+  if ($icon || $description)
+    .item(class=classItem + ' ' + $order)
+      .icon
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#` + $icon)
+      .text=$description
+  else
+    .item(class=classItem)
+      p.text Missing required parameter
+
+mixin information-item($customClass, $image, $title,  $description, $badges) 
+  //- TODO: optional parameter not passed
+  .col.item
+    .image.position-relative(class= $customClass.split(' ').length < 4 ? '' : $customClass.split(' ')[0] + ' ' + $customClass.split(' ')[1])
+      img(src=`img/images/information-${$image}.webp` alt="info-img")
+      if ($badges)
+        .badges.position-absolute
+          img(src="img/images/fix-icon.webp" alt="badges")
+    .info(class= $customClass.split(' ').length < 4 ? '' : $customClass.split(' ')[2] + ' ' + $customClass.split(' ')[3])
+      h4.title=$title
+      p.text=$description
+
+mixin lowPrice-item($image="1", $title="Title default", $link='#')
+  a.item.text-center(href=$link)
+    .image
+      img(src=`img/images/low-price--${$image}.webp` alt="low-price-img")
+    .info
+      h4.title= $title 

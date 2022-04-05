@@ -1,0 +1,83 @@
+.information {
+  background: #f3f9f6;
+  padding: rem(15) 0 rem(35); // compensation mt .item
+
+  @media screen and (min-width: 768px) {
+    padding: rem(20) 0 rem(60); // compensation mt .item
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    .item {
+      display: flex;
+      flex-flow: column-reverse wrap;
+      margin-top: rem(20);
+
+      @media screen and (min-width: 768px) {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        grid-gap: rem(30);
+        margin-top: rem(40);
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        grid-template-columns: repeat(2, minmax(calc(50% - 30px), 1fr));
+      }
+      @media screen and (min-width: 1200px) {
+        grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+      }
+
+      .info {
+        color: #000;
+        margin-bottom: rem(20);
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 0;
+        }
+
+        .title {
+          font-weight: 700;
+          font-size: rem(20);
+          line-height: rem(26);
+
+          @media screen and (min-width: 768px) {
+            font-size: rem(27);
+            line-height: rem(36);
+          }
+        }
+        .text {
+          margin: rem(15) 0 0;
+          font-weight: 500;
+          font-size: rem(16);
+          line-height: rem(24);
+
+          @media screen and (min-width: 768px) {
+            font-size: rem(18);
+            line-height: rem(26);
+          }
+        }
+      }
+      .image {
+        .badges {
+          max-width: 200px;
+          top: rem(10);
+          right: rem(10.5);
+
+          @media screen and (min-width: 768px) {
+            top: rem(-20);
+          }
+          @media screen and (min-width: 1240px) {
+            max-width: 240px;
+          }
+        }
+        img {
+          border-radius: 8px;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
