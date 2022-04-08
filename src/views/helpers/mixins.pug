@@ -1,11 +1,15 @@
+mixin svg(name)
+  svg(class="icon icon-" + name)
+    use(xlink:href="img/sprites/sprite.svg#" + name)
+
+
 mixin feature-item($icon, $description, $order)
   - const classItem = "d-flex align-items-center flex-column text-center";
 
   if ($icon || $description)
     .item(class=classItem + ' ' + $order)
       .icon
-        svg
-          use(xlink:href=`img/sprites/sprite.svg#` + $icon)
+        +svg($icon)
       .text=$description
   else
     .item(class=classItem)
@@ -23,7 +27,7 @@ mixin information-item($customClass, $image, $title,  $description, $badges)
       h4.title=$title
       p.text=$description
 
-mixin lowPrice-item($image="1", $title="Title default", $link='#')
+mixin low-price-item($image="1", $title="Title default", $link='#')
   a.item.text-center(href=$link)
     .image
       img(src=`img/images/low-price--${$image}.webp` alt="low-price-img")

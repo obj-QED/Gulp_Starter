@@ -24,17 +24,13 @@ gulp.task("styles", () => {
     .src(paths.styles.src)
     .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(plumber())
-    .pipe(sass())
-    .pipe(groupmedia())
     .pipe(
-      gulpif(
-        production,
-        autoprefixer({
-          cascade: false,
-          grid: true,
-        })
-      )
+      sass({
+        includePaths: ["node_modules"],
+      })
     )
+    .pipe(groupmedia())
+    .pipe(gulpif(production, autoprefixer("last 3 versions")))
     .pipe(
       gulpif(
         production,
