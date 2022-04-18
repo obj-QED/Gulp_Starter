@@ -1,0 +1,61 @@
+.toddler {
+  margin-bottom: rem(24);
+  &__title {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(16);
+    color: var(--text-color);
+    margin-bottom: rem(8);
+  }
+  &__slide {
+    display: flex;
+    align-items: center;
+  }
+  &__slider-min,
+  &__slider-max {
+    border: rem(1) solid var(--toddler-border);
+    border-radius: rem(4);
+    padding: rem(13) rem(16);
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: rem(20);
+    color: var(--text-color);
+    min-width: rem(60);
+  }
+  .slider {
+    padding: rem(13) rem(16);
+    border: rem(1) solid var(--toddler-border);
+    border-radius: rem(4);
+    width: 100%;
+    margin: 0 rem(8);
+    &__rage {
+      background: var(--toddler-bg-range);
+      border-radius: rem(4);
+      border: 0 !important;
+      height: rem(20);
+      .ui-slider-range {
+        background: var(--toddler-bg-range-full);
+      }
+      .ui-slider-handle {
+        background: var(--toddler-hundle);
+        box-shadow: 0px 1px 4px rgba(59, 67, 87, 0.1);
+        border-radius: rem(2);
+        border: none;
+        width: rem(12);
+        height: rem(40);
+        top: rem(-10);
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transform-origin: 50% 50%;
+          width: rem(4);
+          height: rem(20);
+          background-color: var(--toddler-hundle-before);
+        }
+      }
+    }
+  }
+}

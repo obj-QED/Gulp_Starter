@@ -1,0 +1,85 @@
+// Todo: better pick a color palette. Example blue-100, blue-200 etc. (now it is more convenient to split into modules)
+
+.theme-light {
+  --text-color: #282828;
+  --bg-color: #fff;
+  --body-color: #e5e5e5;
+
+  --btn-bg-color: #a9967d;
+  --btn-text-color: #fff;
+
+  --placeholder-text: #9f9f9f;
+
+  --border-input: #dad5ce;
+
+  --checkbox-border: #dad5ce;
+  --checkbox-bg: #a9967d;
+  --checkbox-cheked-icon: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4815 1.00195L3.96296 7.52047L1 4.55751' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+  --btn-degrees-color: #a9967d;
+  --border-degrees: #bcb5ac;
+
+  --btn-degrees-color-deactive: #9f9f9f;
+  --border-degrees-deactive: #f8f8f8;
+
+  --btn-degrees-remove-color: #d14114;
+  --btn-degrees-remove-bg: #fff;
+  --btn-degrees-remove-bg-hover: #fbf5ee;
+
+  --error-color: #d14114;
+
+  --toggle-bg: #9f9f9f;
+  --toggle-bg-rounded: #fff;
+  --toggle-bg-active: #a9967d;
+
+  --switch-bg: #f4f4f4;
+  --switch-before: #dad5ce;
+
+  --toddler-border: #dad5ce;
+  --toddler-bg-range: #f8f8f8;
+  --toddler-bg-range-full: #dad5ce;
+  --toddler-hundle: #a9967d;
+  --toddler-hundle-before: #fff;
+}
+.theme-dark {
+  --text-color: #c2c7d0;
+  --bg-color: #414e61;
+  --body-color: #303a49;
+
+  --btn-bg-color: #f3c17f;
+  --btn-text-color: #414e61;
+
+  --placeholder-text: #7f8995;
+
+  --border-input: #2c3645;
+
+  --border-degrees: #1c2737;
+
+  --checkbox-border: #2c3645;
+  --checkbox-bg: #f3c17f;
+  --checkbox-cheked-icon: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4815 1.00195L3.96296 7.52047L1 4.55751' stroke='%23414E61' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+  --btn-degrees-color: #f3c17f;
+
+  --btn-degrees-color-deactive: #7f8995;
+  --border-degrees-deactive: #576375;
+
+  --btn-degrees-remove-color: #ff7449;
+  --btn-degrees-remove-bg: #303a49;
+  --btn-degrees-remove-bg-hover: #1a2535;
+
+  --error-color: #ff7449;
+
+  --toggle-bg: #7f8995;
+  --toggle-bg-rounded: #414e61;
+  --toggle-bg-active: #f3c17f;
+
+  --switch-bg: #303a49;
+  --switch-before: #2c3645;
+
+  --toddler-border: #2c3645;
+  --toddler-bg-range: #576375;
+  --toddler-bg-range-full: #2c3645;
+  --toddler-hundle: #f3c17f;
+  --toddler-hundle-before: #414e61;
+}

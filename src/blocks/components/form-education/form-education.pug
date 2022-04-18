@@ -1,0 +1,56 @@
+form.form(id="form-education")
+  .form__header
+    h1.form__header-title Учебное заведение
+    button.btn(type="submit" id="subButton")
+      span.btn__text Сохранить
+    #loader.hidden Отправляем данные...
+  .form__body
+    .form__section
+      .form__section-title Специальность
+      .form__inline-col
+        .form__control
+          label.form__control-label.d-none(for="Speciality") Специальность
+          input(name="Speciality" id="Speciality" placeholder="Введите текст" class="form__control-input")
+
+        .form__control
+          .checkbox
+            input#institution-checkbox.custom-checkbox(type='checkbox' value="1" name='institution-checkbox')
+            label(for='institution-checkbox') Высшее учебное заведение Санкт-Петербурга
+
+    .form__section
+      .form__section-title Заведение
+      .form__inline
+        .form__control
+          label.form__control-label.d-none(for="institution") Заведение
+          input(name="institution" id="institution" placeholder="Введите текст" class="form__control-input")
+        .form__control
+          .checkbox
+            input#magistr-education-checkbox.custom-checkbox(type='checkbox' name="magistr-education-checkbox" value="1")
+            label(for='magistr-education-checkbox') Магистратура учебного заведения
+
+    .form__section
+      .form__section-title Ученые степени или звания
+      .degrees-block
+        .degrees-block__inline.form__inline-col
+          .form__control
+            label.toggle-checkbox
+              input(type='checkbox' class="toggle-checkbox__input" name="academic-degree-checkbox" id="academic-degree-checkbox" value="1")
+              span.toggle-checkbox__slider
+            label.form__control-label(for="academic-degree") Ученая степень <span class="required">*</span>
+            input(name="academic-degree" id="academic-degree" placeholder="Введите текст" class="form__control-input" required)
+          .form__control
+            label.form__control-label(for="knowledge") Область <span class="required">*</span>
+            input(name="knowledge" id="knowledge" placeholder="Введите текст" class="form__control-input" required)
+
+        .degrees-block__remove
+          svg(width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M2 4.00195H3.33333H14' stroke='#D14114' stroke-linecap='round' stroke-linejoin='round')
+            path(d='M5.33337 4.00187V2.66854C5.33337 2.31492 5.47385 1.97578 5.7239 1.72573C5.97395 1.47568 6.31309 1.33521 6.66671 1.33521H9.33337C9.687 1.33521 10.0261 1.47568 10.2762 1.72573C10.5262 1.97578 10.6667 2.31492 10.6667 2.66854V4.00187M12.6667 4.00187V13.3352C12.6667 13.6888 12.5262 14.028 12.2762 14.278C12.0261 14.5281 11.687 14.6685 11.3334 14.6685H4.66671C4.31309 14.6685 3.97395 14.5281 3.7239 14.278C3.47385 14.028 3.33337 13.6888 3.33337 13.3352V4.00187H12.6667Z' stroke='#D14114' stroke-linecap='round' stroke-linejoin='round')
+            path(d='M6.66663 7.33521V11.3352' stroke='#D14114' stroke-linecap='round' stroke-linejoin='round')
+            path(d='M9.33337 7.33521V11.3352' stroke='#D14114' stroke-linecap='round' stroke-linejoin='round')
+        .degrees-block__add
+          .icon
+          span.text Добавить
+
+    include ../toddler/toddler
+    include ../switch-theme/switch-theme

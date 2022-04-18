@@ -1,7 +1,5 @@
 @import "import/normalize";
 
-@import "bootstrap/scss/bootstrap";
-
 // extend bootstrap grid system
 $grid-breakpoints: (
   xs: 0,
@@ -9,15 +7,15 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1360px,
-  xxxl: 1860px,
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1240px,
-  xxxl: 1800px,
+  xl: 1092px,
 );
+
+$grid-gutter-width: 0.5rem !default;
+
+@import "bootstrap/scss/bootstrap";
