@@ -5,7 +5,6 @@ html(lang="ru")
 	head
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		base(href="/")
 		title #{title}
 		meta(name="theme-color" content="#fff")
 		meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
@@ -26,10 +25,7 @@ html(lang="ru")
 		link(rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png")
 		link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")
 		link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
-		link(rel='preconnect' href='https://fonts.googleapis.com')
-		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-		link(href='https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap' rel='stylesheet')
 		link(rel="stylesheet" href="styles/main.css")
-	body.theme-light
+	body
 		block content
 		block scripts
